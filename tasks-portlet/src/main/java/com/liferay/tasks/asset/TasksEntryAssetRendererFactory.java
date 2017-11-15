@@ -17,16 +17,14 @@
 
 package com.liferay.tasks.asset;
 
-import com.liferay.portal.kernel.exception.PortalException;
-import com.liferay.portal.kernel.exception.SystemException;
-import com.liferay.portal.kernel.security.permission.PermissionChecker;
-import com.liferay.portal.kernel.theme.ThemeDisplay;
-import com.liferay.portal.kernel.util.PortalUtil;
-
 import javax.portlet.PortletRequest;
 
 import com.liferay.asset.kernel.model.AssetRenderer;
 import com.liferay.asset.kernel.model.BaseAssetRendererFactory;
+import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.exception.SystemException;
+import com.liferay.portal.kernel.security.permission.PermissionChecker;
+import com.liferay.portal.kernel.util.PortalUtil;
 import com.liferay.tasks.model.TasksEntry;
 import com.liferay.tasks.service.TasksEntryLocalServiceUtil;
 import com.liferay.tasks.service.permission.TasksEntryPermission;

@@ -17,29 +17,26 @@
 
 package com.liferay.tasks.asset;
 
-import com.liferay.portal.kernel.portlet.LiferayPortletRequest;
-import com.liferay.portal.kernel.portlet.LiferayPortletResponse;
-import com.liferay.portal.kernel.model.User;
-import com.liferay.portal.kernel.security.permission.ActionKeys;
-import com.liferay.portal.kernel.security.permission.PermissionChecker;
-import com.liferay.portal.kernel.theme.ThemeDisplay;
-import com.liferay.portal.kernel.util.PortalUtil;
-import com.liferay.portal.kernel.portlet.PortletURLFactoryUtil;
-import com.liferay.asset.kernel.model.BaseAssetRenderer;
-import com.liferay.asset.kernel.model.BaseJSPAssetRenderer;
-import com.liferay.tasks.model.TasksEntry;
-import com.liferay.tasks.service.permission.TasksEntryPermission;
-import com.liferay.tasks.util.TaskPortletKeys;
-import com.liferay.tasks.util.WebKeys;
-
 import java.util.Locale;
 
 import javax.portlet.PortletRequest;
 import javax.portlet.PortletResponse;
 import javax.portlet.PortletURL;
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
 import javax.servlet.http.HttpServletRequest;
+
+import com.liferay.asset.kernel.model.BaseJSPAssetRenderer;
+import com.liferay.portal.kernel.model.User;
+import com.liferay.portal.kernel.portlet.LiferayPortletRequest;
+import com.liferay.portal.kernel.portlet.LiferayPortletResponse;
+import com.liferay.portal.kernel.portlet.PortletURLFactoryUtil;
+import com.liferay.portal.kernel.security.permission.ActionKeys;
+import com.liferay.portal.kernel.security.permission.PermissionChecker;
+import com.liferay.portal.kernel.theme.ThemeDisplay;
+import com.liferay.portal.kernel.util.PortalUtil;
+import com.liferay.tasks.model.TasksEntry;
+import com.liferay.tasks.service.permission.TasksEntryPermission;
+import com.liferay.tasks.util.TaskPortletKeys;
+import com.liferay.tasks.util.WebKeys;
 
 /**
  * @author Matthew Kong

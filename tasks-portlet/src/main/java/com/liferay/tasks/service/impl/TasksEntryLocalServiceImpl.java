@@ -17,34 +17,34 @@
 
 package com.liferay.tasks.service.impl;
 
+import java.util.Date;
+import java.util.HashSet;
+import java.util.List;
+
+import com.liferay.asset.kernel.service.AssetEntryLocalServiceUtil;
 import com.liferay.counter.kernel.service.CounterLocalServiceUtil;
+import com.liferay.message.boards.kernel.service.MBMessageLocalServiceUtil;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.json.JSONFactoryUtil;
 import com.liferay.portal.kernel.json.JSONObject;
+import com.liferay.portal.kernel.model.User;
+import com.liferay.portal.kernel.model.UserNotificationDeliveryConstants;
 import com.liferay.portal.kernel.notifications.NotificationEvent;
 import com.liferay.portal.kernel.notifications.NotificationEventFactoryUtil;
 import com.liferay.portal.kernel.notifications.UserNotificationManagerUtil;
-import com.liferay.portal.kernel.util.StringPool;
-import com.liferay.portal.kernel.util.Validator;
-import com.liferay.portal.kernel.model.User;
-import com.liferay.portal.kernel.model.UserNotificationDeliveryConstants;
 import com.liferay.portal.kernel.service.ServiceContext;
 import com.liferay.portal.kernel.service.UserLocalServiceUtil;
 import com.liferay.portal.kernel.service.UserNotificationEventLocalServiceUtil;
 import com.liferay.portal.kernel.util.PortalUtil;
-import com.liferay.asset.kernel.service.AssetEntryLocalServiceUtil;
-import com.liferay.message.boards.kernel.service.MBMessageLocalServiceUtil;
-import com.liferay.tasks.TasksEntryDueDateException;
-import com.liferay.tasks.TasksEntryTitleException;
+import com.liferay.portal.kernel.util.StringPool;
+import com.liferay.portal.kernel.util.Validator;
+import com.liferay.tasks.exception.TasksEntryDueDateException;
+import com.liferay.tasks.exception.TasksEntryTitleException;
 import com.liferay.tasks.model.TasksEntry;
 import com.liferay.tasks.model.TasksEntryConstants;
 import com.liferay.tasks.service.base.TasksEntryLocalServiceBaseImpl;
 import com.liferay.tasks.util.TaskPortletKeys;
-
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
 
 /**
  * @author Ryan Park
