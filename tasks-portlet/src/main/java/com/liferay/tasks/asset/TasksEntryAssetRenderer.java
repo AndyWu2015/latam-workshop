@@ -140,4 +140,9 @@ public class TasksEntryAssetRenderer extends BaseJSPAssetRenderer<TasksEntry> {
 
 	private TasksEntry _entry;
 
+	@Override
+	public TasksEntry getAssetObject() {
+		return _entry;
+	}
+
 }
